@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <title>Company slogan here</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__content-logo">
+        <a class="logo header__logo-link" href="#">
+          <img class="logo-img header__logo-img" src="img/Layer3.png" alt="Logo company">
+        </a>
+      </div>
+
+      <nav class="nav header__nav">
+        <button class="header__burger-btn" aria-label="Меню"></button>
+        <ul class="header__list header__list_dis header__list_active">
+          <li class="header__item">
+            <a class="header__item-link" href="#">Aktuelles</a>
+          </li>
+
+          <li class="header__item">
+            <a class="header__item-link" href="#">Philosophie</a>
+          </li>
+
+          <li class="header__item">
+            <a class="header__item-link header__item-link_black" href="#">Besonderheiten</a>
+          </li>
+
+          <li class="header__item">
+            <a class="header__item-link" href="#">Partner</a>
+          </li>
+
+          <li class="header__item">
+            <a class="header__item-link" href="#">Kontakt</a>
+          </li>
+
+          <li class="header__item">
+            <a class="header__item-link" href="#">Impressum</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section-hero">
+      <div class="container section-hero__container">
+        <div class="section-hero__content">
+          <h1 class="title section-hero__title visually-hidden">Company slogan here</h1>
+
+          <div class="swiper section-hero__swiper">
+            <div class="swiper-wrapper section-hero__swiper-wrapper">
+              <div class="swiper-slide section-hero__swiper-slide section-hero__swiper-slide_first"></div>
+              <div class="swiper-slide section-hero__swiper-slide section-hero__swiper-slide_second"></div>
+              <div class="swiper-slide section-hero__swiper-slide section-hero__swiper-slide_third"></div>
+            </div>
+            <div class="swiper-button-prev section-hero__swiper-button-prev"></div>
+            <div class="swiper-button-next section-hero__swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-about-us">
+      <h2 class="title section-about-us__title visually-hidden">About Us</h2>
+      <div class="container section-about-us__container">
+        <div class="section-about-us__content">
+          <strong class="section-about-us__title">Sehr geehrte Patienten,</strong>
+
+          <p class="section-about-us__description">wir freuen uns, dass Sie sich für unsere Praxis für moderne
+            Zahnheilkunde interessieren – herzlich willkommen!</p>
+
+          <p class="section-about-us__description section-about-us__description_second">Die Homepage soll Ihnen einen
+            ersten Einblick in das Leistungsspektrum und die Behandlungsphilosophie vermitteln. Es wird Sie
+            interessieren, wie schonend und sorgsam ein Zahnarztbesuch sein kann.</p>
+
+          <p class="section-about-us__description section-about-us__description_third">Sie sind herzlich eingeladen,
+            sich bei einem Besuch in meiner Praxis mit ihren Fragen und Wünschen anzuvertrauen.</p>
+
+          <p class="section-about-us__description section-about-us__description_last">Ihre Dr. Dr. Günther Chmelitschek
+            und Dr. Thomas Chmelitschek</p>
+        </div>
+
+        <div class="section-about-us__work-info">
+          <strong class="section-about-us__title-work">Sprechzeiten </strong>
+
+          <address class="section-about-us__address section-about-us__address_mt">Zahnarztpraxis Dr. Dr. Chmelitschek
+            Stollstr. 6</address>
+          <address class="section-about-us__address">83022 Rosenheim</address>
+
+          <span class="section-about-us__time-work">Mo-Fr von 08:00-18:00 Uhr</span>
+          <span class="section-about-us__time-work section-about-us__time-work_nmt">und nach Vereinbarung</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <span class="footer__text">Zahnarztpraxis Chmelitschek © 2011</span>
+    </div>
+  </footer>
+
+  <script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper', {
+      effect: 'coverflow',
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    const burgerMenu = document.querySelector('.header__burger-btn')
+    const headerList = document.querySelector('.header__list')
+
+    burgerMenu.addEventListener('click', () => {
+      headerList.classList.toggle('header__list_dis')
+    })
+  })
+</script>
+</body>
+</html>
